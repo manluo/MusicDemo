@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
             if (myBinder != null) {
                 musicService = myBinder.getService();
             }
-
             isConnected = true;
             Log.i(TAG, "--->音乐服务连接成功" + musicPath);
         }
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void start_second_activity(View view) {
-        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        Intent intent = new Intent(MainActivity.this, LrcViewActivity.class);
         startActivity(intent);
     }
 

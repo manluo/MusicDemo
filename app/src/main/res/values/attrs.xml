@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Lrc">
+        <attr name="textSize" format="dimension" />
+        <attr name="normalTextColor" format="color" />
+        <attr name="currentTextColor" format="color" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="rows" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="Lrc_View">
+        <attr name="mNormalTextColor" format="color" />
+        <attr name="mCurrentTextColor" format="color" />
+        <attr name="mSeekLineColor" format="color" />
+        <attr name="mSeekLineTextColor" format="color" />
+        <attr name="mSeekLineTextSize" format="dimension" />
+        <attr name="mFontSize" format="dimension" />
+        <attr name="mMinLrcFontSize" format="dimension" />
+        <attr name="mMaxLrcFontSize" format="dimension" />
+        <attr name="mMinSeekLineTextSize" format="dimension" />
+        <attr name="mMaxSeekLineTextSize" format="dimension" />
+        <attr name="mPaddingY" format="dimension" />
+        <attr name="mModel" format="enum">
+            <enum name="normal_model" value="0" />
+            <enum name="sing_model" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

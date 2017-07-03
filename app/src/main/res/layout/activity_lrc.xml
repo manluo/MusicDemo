@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Lrc_View="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<com.xman.musicdemo.LrcView-->
+    <!--android:id="@+id/play_first_lrc"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--lrc:currentTextColor="@color/colorPrimary"-->
+    <!--lrc:dividerHeight="20dp"-->
+    <!--lrc:normalTextColor="@android:color/white"-->
+    <!--lrc:textSize="18sp"-->
+    <!--lrc:rows="9"/>-->
+
+    <com.xman.musicdemo.view.impl.LrcView
+        android:id="@+id/lrcView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        Lrc_View:mCurrentTextColor="@color/colorPrimary"
+        Lrc_View:mFontSize="15sp"
+        Lrc_View:mMaxLrcFontSize="30sp"
+        Lrc_View:mMaxSeekLineTextSize="12sp"
+        Lrc_View:mMinLrcFontSize="13sp"
+        Lrc_View:mMinSeekLineTextSize="13sp"
+        Lrc_View:mNormalTextColor="@android:color/white"
+        Lrc_View:mPaddingY="20dp"
+        Lrc_View:mSeekLineColor="@color/colorPrimaryDark"
+        Lrc_View:mSeekLineTextColor="@color/colorPrimaryDark"
+        Lrc_View:mSeekLineTextSize="12sp"
+        Lrc_View:mModel="sing_model" />
+
+</LinearLayout>

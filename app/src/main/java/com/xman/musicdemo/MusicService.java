@@ -75,6 +75,7 @@ public class MusicService extends Service {
                 Log.i(TAG, "---->播放完毕==>onCompletion");
                 setMusicStatus(musicMission, MusicMission.MusicStatus.MUSIC_STATUS_COMPLETION);
                 sendMusicBroadCast(musicMission);
+                handler.removeCallbacks(refreshUiTask);
             }
         });
         mediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
@@ -99,6 +100,7 @@ public class MusicService extends Service {
         return binder;
     }
 
+
     public class MyBinder extends Binder {
         MusicService getService() {
             return MusicService.this;
@@ -110,7 +112,6 @@ public class MusicService extends Service {
             try {
                 mediaPlayer.reset();
                 mediaPlayer.setDataSource(musicPath);
-                mediaPlayer.setLooping(true);
                 mediaPlayer.prepare();
             } catch (IOException e) {
                 e.printStackTrace();
