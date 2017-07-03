@@ -180,7 +180,7 @@ public class LrcView extends View implements ILrcView {
                 lrc_model = LRC_Model.NORMAL_MODEL;
                 break;
             case 1:
-                lrc_model = LRC_Model.SING_MODEL;
+                lrc_model = LRC_Model.FOLLOW_ME_SING_MODEL;
                 break;
             default:
                 lrc_model = LRC_Model.NORMAL_MODEL;
@@ -294,7 +294,7 @@ public class LrcView extends View implements ILrcView {
                 rowY += (mPaddingY + mLrcFontSize);
                 rowNum++;
             }
-        } else if (lrc_model == LRC_Model.SING_MODEL) { //演唱模式
+        } else if (lrc_model == LRC_Model.FOLLOW_ME_SING_MODEL) { //演唱模式
             final int rowX = width / 2;
             int rowNum = mHignlightRow + 1;
             int highlightRowY = height - (int) mLrcFontSize * 2 - mPaddingY;
@@ -375,7 +375,7 @@ public class LrcView extends View implements ILrcView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (mLrcRows == null || mLrcRows.size() == 0 || lrc_model == LRC_Model.SING_MODEL) {
+        if (mLrcRows == null || mLrcRows.size() == 0 || lrc_model == LRC_Model.FOLLOW_ME_SING_MODEL) {
             return super.onTouchEvent(event);
         }
         switch (event.getAction()) {
@@ -592,7 +592,7 @@ public class LrcView extends View implements ILrcView {
     }
 
     public enum LRC_Model {
-        NORMAL_MODEL, SING_MODEL;
+        NORMAL_MODEL, FOLLOW_ME_SING_MODEL;
     }
 
     public void drawLrc(Canvas canvas, int index, int rowY, int viewHeight, int rowNum, int highlightRowY, int rowX) {
